@@ -3,16 +3,16 @@
 * step1:download install.sh file
 * step2:run sh file as sudo ./install.sh
 
-##manually installation of xrdp.
-###Commands:
-  >sudo apt-get update
-  >sudo apt-get upgrade
-  >sudo apt install xfce4 xfce4-goodies xorg dbus-x11 x11-xserver-utils OR sudo apt install xubuntu-desktop
-  >sudo apt install xrdp 
-  >sudo systemctl status xrdp (for testing)
-  >sudo adduser xrdp ssl-cert 
-  >sudo systemctl restart xrdp
-  >Sudo apt install samba	
+## manually installation of xrdp.
+### Commands:
+  * sudo apt-get update
+  * sudo apt-get upgrade
+  * sudo apt install xfce4 xfce4-goodies xorg dbus-x11 x11-xserver-utils OR sudo apt install xubuntu-desktop
+  * sudo apt install xrdp 
+  * sudo systemctl status xrdp (for testing)
+  * sudo adduser xrdp ssl-cert 
+  * sudo systemctl restart xrdp
+  * Sudo apt install samba	
 
 ##manually installation of software.
 * Dconf-editor
