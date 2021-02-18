@@ -8,4 +8,4 @@
 		> cd /usr/bin/ 
 	* change permission  
 		> chmod +x pfc
-* step4:type pfc then its asking for folder name.
+* step4:run pfc and enter folder name.
