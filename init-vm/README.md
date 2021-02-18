@@ -5,16 +5,16 @@
 
 ## manually installation of xrdp.
 ### Commands:
-  * sudo apt-get update
-  * sudo apt-get upgrade
-  * sudo apt install xfce4 xfce4-goodies xorg dbus-x11 x11-xserver-utils OR sudo apt install xubuntu-desktop
-  * sudo apt install xrdp 
-  * sudo systemctl status xrdp (for testing)
-  * sudo adduser xrdp ssl-cert 
-  * sudo systemctl restart xrdp
-  * Sudo apt install samba	
+  ** sudo apt-get update
+  ** sudo apt-get upgrade
+  ** sudo apt install xfce4 xfce4-goodies xorg dbus-x11 x11-xserver-utils OR sudo apt install xubuntu-desktop
+  ** sudo apt install xrdp 
+  ** sudo systemctl status xrdp (for testing)
+  ** sudo adduser xrdp ssl-cert 
+  ** sudo systemctl restart xrdp
+  ** Sudo apt install samba	
 
-##manually installation of software.
+## manually installation of software.
 * Dconf-editor
   >sudo apt-get install dconf-editor
   After that open dconf-editor
