@@ -1,9 +1,9 @@
-echo -n "enter folder name: "
+echo -n "Enter folder name: "
 read foldername
-sudo mkdir ~/work/$foldername
-sudo mkdir ~/work/$foldername/backup
-sudo mkdir ~/work/$foldername/data
-sudo mkdir ~/work/$foldername/design
-sudo mkdir ~/work/$foldername/themes
-sudo mkdir ~/work/$foldername/plugins
-sudo mkdir ~/work/$foldername/www   
+mkdir ~/work/$foldername
+mkdir ~/work/$foldername/backup
+mkdir ~/work/$foldername/data
+mkdir ~/work/$foldername/design
+mkdir ~/work/$foldername/themes
+mkdir ~/work/$foldername/plugins
+mkdir ~/work/$foldername/www
