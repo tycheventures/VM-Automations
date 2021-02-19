@@ -49,6 +49,13 @@ sudo gdebi AdbeRdr9.5.5-1_i386linux_enu.deb
 
 #webinoly
 wget -qO weby qrok.es/wy && sudo bash weby 3
+sudo webinoly -timezone=Asia/Kolkata
+sudo httpauth -wp-admin=off
+sudo webinoly -login-www-data=on
+sudo webinoly -conf-value_max-mb-uploads=1024
+sudo webinoly -conf-value_php-max-time=3000
+sudo webinoly -conf-value_php-max-mem=512
+sudo httpauth -add=[tyche,net]
 
 #ip address
 ifconfig
