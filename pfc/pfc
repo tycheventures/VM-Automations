@@ -7,4 +7,3 @@ mkdir ~/work/$foldername/design
 mkdir ~/work/$foldername/themes
 mkdir ~/work/$foldername/plugins
 mkdir ~/work/$foldername/www   
-mkdir ~/work/$foldername/www
