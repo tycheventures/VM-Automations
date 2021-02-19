@@ -2,6 +2,7 @@
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt install net-tools
+sudo apt autoremove
 
 #installation of xrdp
 sudo apt install xubuntu-desktop
@@ -47,7 +48,7 @@ wget ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386
 sudo gdebi AdbeRdr9.5.5-1_i386linux_enu.deb
 
 #webinoly
-wget -qO weby qrok.es/wy && sudo bash weby 3Sublime text editor
+wget -qO weby qrok.es/wy && sudo bash weby 3
 
 #ip address
 ifconfig
