@@ -1,10 +1,11 @@
 # Initialise VM with all basic required packages
 
 ## Automated installations
-  This file use for to install xrdp and varius types of softwares like google chrome,webinoly etc.
-* step1:download install.sh file
-* step2:run sh file as sudo ./install.sh
+  This file use for to install xrdp and various types of softwares like google chrome,webinoly etc.
+* Step 1: Download install.sh file
+* Step 2: Run shell file using terminal as sudo ./install.sh
 
+Or You can above things one line of command. Just copy & paste below line in terminal.
 `wget -qO init-vm https://raw.githubusercontent.com/tycheventures/vm-automations/main/init-vm/install.sh && sudo chmod +x init-vm && sudo bash init-vm`
 
 ## Manually installation
