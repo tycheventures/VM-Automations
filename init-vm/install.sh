@@ -59,3 +59,7 @@ sudo httpauth -add=[tyche,net]
 
 #ip address
 ifconfig
+
+#PFC- project folder creator
+mkdir ~/work
+wget -qO pfc https://raw.githubusercontent.com/tycheventures/vm-automations/main/pfc/pfc && sudo mv pfc /usr/bin/ && sudo chmod +x /usr/bin/pfc
