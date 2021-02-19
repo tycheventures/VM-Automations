@@ -1,54 +1,54 @@
 #cheking update
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt install net-tools
-sudo apt autoremove
+sudo apt-get update --assume-yes
+sudo apt-get upgrade --assume-yes
+sudo apt install net-tools --assume-yes
+sudo apt autoremove --assume-yes
 
 #installation of xrdp
-sudo apt install xubuntu-desktop
-sudo apt install xrdp
-sudo adduser xrdp ssl-cert
-sudo systemctl restart xrdp
+sudo apt install xubuntu-desktop --assume-yes
+sudo apt install xrdp --assume-yes
+sudo adduser xrdp ssl-cert --assume-yes
+sudo systemctl restart xrdp --assume-yes
 
 #Dconf-editor
-sudo apt-get install dconf-editor
+sudo apt-get install dconf-editor --assume-yes
 
 #chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome-stable_current_amd64.deb
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb --assume-yes
+sudo apt install ./google-chrome-stable_current_amd64.deb --assume-yes
 
 #filezilla
-sudo apt-get install filezilla
+sudo apt-get install filezilla --assume-yes
 
 #kruler
-sudo apt-get install -y kruler
+sudo apt-get install -y kruler --assume-yes
 
 #gimp
-sudo snap install gimp
+sudo snap install gimp --assume-yes
 
 #opera
-sudo snap install opera
+sudo snap install opera --assume-yes
 
 #skype
-wget https://go.skype.com/skypeforlinux-64.deb
-sudo apt install ./skypeforlinux-64.deb
+wget https://go.skype.com/skypeforlinux-64.deb --assume-yes
+sudo apt install ./skypeforlinux-64.deb--assume-yes
 
 #slack
-sudo snap install slack --classic
+sudo snap install slack --classic --assume-yes
 
 #git
-apt-get install git
+apt-get install git --assume-yes
 
 #samba
-sudo apt install samba
+sudo apt install samba --assume-yes
 
 #adobe reader
-sudo apt install gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386
-wget ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386linux_enu.deb
-sudo gdebi AdbeRdr9.5.5-1_i386linux_enu.deb
+sudo apt install gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386 --assume-yes
+wget ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386linux_enu.deb --assume-yes
+sudo gdebi AdbeRdr9.5.5-1_i386linux_enu.deb --assume-yes
 
 #webinoly
-wget -qO weby qrok.es/wy && sudo bash weby 3
+wget -qO weby qrok.es/wy && sudo bash weby 3 --assume-yes
 sudo webinoly -timezone=Asia/Kolkata
 sudo httpauth -wp-admin=off
 sudo webinoly -login-www-data=on
