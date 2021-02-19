@@ -1,9 +1,9 @@
 # Install.sh
-  this file use for to install xrdp and varius types of softwares like google chrome,webinoly etc.
+  This file use for to install xrdp and varius types of softwares like google chrome,webinoly etc.
 * step1:download install.sh file
 * step2:run sh file as sudo ./install.sh
 
-## manually installation of xrdp.
+## Manually installation of xrdp.
 ### Commands:
   ```
   sudo apt-get update
@@ -13,10 +13,10 @@
   sudo systemctl status xrdp (for testing)
   sudo adduser xrdp ssl-cert 
   sudo systemctl restart xrdp
-  Sudo apt install samba	
+  sudo apt install samba	
    ```
 
-## manually installation of software.
+## Manually installation of software.
 * Dconf-editor
   `sudo apt-get install dconf-editor`
   After that open dconf-editor
@@ -39,30 +39,25 @@
 * Webinoly
   `wget -qO weby qrok.es/wy && sudo bash weby 3Sublime text editor`
 
-* adobe reader
+* Adobe reader
   ```  
   sudo apt install gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engin>
   wget ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i38>
   sudo gdebi AdbeRdr9.5.5-1_i386linux_enu.deb
   ```
-* kruler
+* Kruler
   `sudo apt-get install -y kruler`
 
-* gimp
+* Gimp
   `sudo snap install gimp#skype`
 
-* skype 
+* Skype 
   ```
   wget https://go.skype.com/skypeforlinux-64.deb
   sudo apt install ./skypeforlinux-64.deb
   ```
-* slack
+* Slack
   `sudo snap install slack --classic`
 
-* opera
+* Opera
   `sudo snap install opera`
-
-
-
-
-
