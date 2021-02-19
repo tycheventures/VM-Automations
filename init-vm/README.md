@@ -1,10 +1,14 @@
-# Install.sh
+# Initialise VM with all basic required packages
+
+## Automated installations
   This file use for to install xrdp and varius types of softwares like google chrome,webinoly etc.
 * step1:download install.sh file
 * step2:run sh file as sudo ./install.sh
 
-## Manually installation of xrdp.
-### Commands:
+`wget -qO init-vm https://raw.githubusercontent.com/tycheventures/vm-automations/main/init-vm/install.sh && sudo chmod +x init-vm && sudo bash init-vm`
+
+## Manually installation
+### XRDP configuration Commands:
   ```
   sudo apt-get update
   sudo apt-get upgrade
@@ -36,9 +40,6 @@
   sudo apt-get install sublime-text
   ```
 
-* Webinoly
-  `wget -qO weby qrok.es/wy && sudo bash weby 3Sublime text editor`
-
 * Adobe reader
   ```
   sudo apt install gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engin>
@@ -61,3 +62,6 @@
 
 * Opera
   `sudo snap install opera`
+
+* Webinoly
+  `wget -qO weby qrok.es/wy && sudo bash weby 3Sublime text editor`
