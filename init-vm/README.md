@@ -6,6 +6,7 @@
 * Step 2: Run shell file using terminal as sudo ./install.sh
 
 Or You can above things one line of command. Just copy & paste below line in terminal.
+
 `wget -qO init-vm https://raw.githubusercontent.com/tycheventures/vm-automations/main/init-vm/install.sh && sudo chmod +x init-vm && sudo bash init-vm`
 
 ## Manually installation
