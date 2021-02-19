@@ -39,8 +39,6 @@
 * Webinoly
   `wget -qO weby qrok.es/wy && sudo bash weby 3Sublime text editor`
 
-* adobe reader
-  ```
 * Adobe reader
   ```
   sudo apt install gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engin>
