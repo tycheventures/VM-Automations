@@ -67,3 +67,32 @@ Or You can above things one line of command. Just copy & paste below line in ter
 
 * Webinoly
   `wget -qO weby qrok.es/wy && sudo bash weby 3Sublime text editor`
+
+## Xrdp popup showing
+
+XRDP – New “AxRDP – New “Authentication Required…” Popup showing up in Ubuntu 19uthentication Required…” Popup showing up in Ubuntu 19.04
+#### Issue:
+Always ask for authentication
+  * Go to administrator mode. Sudo -s  
+  * cd /etc/polkit-1/localauthority/50-local.d/
+  * create file
+    * cat > 45-allow-colord.pkla 
+  * edit file
+    * nano 45-allow-colord.pkla 
+  * pest code
+
+```
+[Allow Colord all Users]
+Identity=unix-user:*
+Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile
+ResultAny=no
+ResultInactive=no
+ResultActive=yes   
+
+[Allow Package Management all Users]
+Identity=unix-user:*
+Action=org.debian.apt.*;io.snapcraft.*;org.freedesktop.packagekit.*;com.ubuntu.update-notifier.*
+ResultAny=no
+ResultInactive=no
+ResultActive=yes
+```
