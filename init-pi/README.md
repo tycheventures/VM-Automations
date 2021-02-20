@@ -1,4 +1,4 @@
-# Fresh installation on raspberry pi
+# Prepare Rspberry-Pi as RDP client
 ### Commands:
 Finish setup with an update.	
 ```
