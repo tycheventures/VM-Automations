@@ -6,7 +6,8 @@ there are three files
 * pfc
 
 ## init-pi
-this file use to install xfreerdp-x11.its use for control other machine using remotely.
+Prepare Rspberry-Pi as RDP client.
+This file use to install xfreerdp-x11. It's use for control other machine using remotely.
 
 ## init-pi
 In this file there are all office usable software.
