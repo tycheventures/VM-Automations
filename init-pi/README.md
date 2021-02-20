@@ -1,13 +1,20 @@
 # Prepare Rspberry-Pi as RDP client
 
 ### Commands:
-Finish setup with an update.	
+Finish setup with an update.
+* Run command in terminal
 ```
 sudo apt-get update
 sudo apt-get upgrade
 apt install xinit openbox  python-qt4 python-configparser python-urllib3 x11-xserver-utils lxterminal freerdp2-x11 xscreensaver alsa-utils pulseaudio git arandr
 ```
+OR 
+* Download file using below link
+
+    `wget https://raw.githubusercontent.com/tycheventures/vm-automations/main/init-pi/init-pi.sh && sudo chmod +x init-pi.sh && bash init-pi.sh`
+
 ### Reference links:
+
    * https://www.youtube.com/watch?v=jwd1-P2p-Bk
    * https://www.youtube.com/watch?v=cqxayan4FDU&t=76s
 
