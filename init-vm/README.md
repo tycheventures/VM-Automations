@@ -65,6 +65,18 @@ Or You can above things one line of command. Just copy & paste below line in ter
 * Opera
   `sudo snap install opera`
 
+* npm
+  `npm install -g npm`
+  
+* composer
+  ```
+  sudo apt install php-cli unzip
+  cd ~
+  curl -sS https://getcomposer.org/installer -o composer-setup.php
+  HASH=`curl -sS https://composer.github.io/installer.sig`
+  php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php');   } echo PHP_EOL;"
+  sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
 * Webinoly
   `wget -qO weby qrok.es/wy && sudo bash weby 3Sublime text editor`
 
