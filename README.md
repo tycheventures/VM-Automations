@@ -1,9 +1,9 @@
 # vm-automations
 Few command lines or automations written for office use
 there are three files
-* init-pi
-* init-vm
-* pfc
+* [Init-PI](init-pi)
+* [Init-VM](init-vm)
+* [PFC command](pfc)
 
 ## init-pi
 Prepare Rspberry-Pi as RDP client.
