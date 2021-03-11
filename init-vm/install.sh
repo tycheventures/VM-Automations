@@ -1,7 +1,7 @@
 #cheking update
 sudo apt-get update --assume-yes
 sudo apt-get upgrade --assume-yes
-sudo apt install net-tools --assume-yes
+sudo apt install net-tools unzip curl --assume-yes
 sudo apt autoremove --assume-yes
 
 #installation of xrdp
@@ -24,34 +24,35 @@ sudo apt-get install filezilla --assume-yes
 sudo apt-get install -y kruler --assume-yes
 
 #gimp
-sudo snap install gimp --assume-yes
+sudo snap install gimp
 
 #opera
-sudo snap install opera --assume-yes
+sudo snap install opera
 
 #skype
 wget https://go.skype.com/skypeforlinux-64.deb
-sudo apt install ./skypeforlinux-64.deb--assume-yes
+sudo apt install ./skypeforlinux-64.deb --assume-yes
 
 #slack
-sudo snap install slack --classic --assume-yes
+sudo snap install slack --classic
 
 #git
-apt-get install git --assume-yes
+sudo apt-get install git --assume-yes 
 
 #samba
 sudo apt install samba --assume-yes
 
 #adobe reader
-sudo apt install gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386
-wget ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386linux_enu.deb
-sudo gdebi AdbeRdr9.5.5-1_i386linux_enu.deb --assume-yes
+sudo apt install gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386 --assume-yes
+wget -qO adobe.deb ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386linux_enu.deb
+sudo gdebi -n adobe.deb
 
 #npm
-npm install -g npm
+sudo apt install npm --assume-yes
+sudo npm install -g npm
 
 #composer
-sudo apt install php-cli unzip
+sudo apt install php-cli --assume-yes
 cd ~
 curl -sS https://getcomposer.org/installer -o composer-setup.php
 HASH=`curl -sS https://composer.github.io/installer.sig`
@@ -70,6 +71,10 @@ sudo apt-get install apt-transport-https --assume-yes
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt-get update
 sudo apt-get install sublime-merge --assume-yes
+
+#wpcli
+curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && chmod +x wp-cli.phar && sudo mv wp-cli.phar /usr/local/bin/wp
+wp --info
 
 #webinoly
 wget -qO weby qrok.es/wy && sudo bash weby 3
