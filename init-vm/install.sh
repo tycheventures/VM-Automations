@@ -58,6 +58,13 @@ HASH=`curl -sS https://composer.github.io/installer.sig`
 php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php');   } echo PHP_EOL;"
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
+#sublime merge
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo apt-get install apt-transport-https --assume-yes
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt-get update
+sudo apt-get install sublime-merge --assume-yes
+
 #webinoly
 wget -qO weby qrok.es/wy && sudo bash weby 3 --assume-yes
 sudo webinoly -timezone=Asia/Kolkata
