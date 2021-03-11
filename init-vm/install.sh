@@ -51,14 +51,6 @@ sudo gdebi -n adobe.deb
 sudo apt install npm --assume-yes
 sudo npm install -g npm
 
-#composer
-sudo apt install php-cli --assume-yes
-cd ~
-curl -sS https://getcomposer.org/installer -o composer-setup.php
-HASH=`curl -sS https://composer.github.io/installer.sig`
-php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php');   } echo PHP_EOL;"
-sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-
 #sublime text
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
@@ -85,6 +77,12 @@ sudo webinoly -conf-value_max-mb-uploads=1024
 sudo webinoly -conf-value_php-max-time=3000
 sudo webinoly -conf-value_php-max-mem=512
 sudo httpauth -add=[tyche,net]
+
+#composer
+sudo apt install php-cli php-zip php-curl php-mbstring --assume-yes
+sudo service nginx restart
+cd ~ && curl -sS https://getcomposer.org/installer -o composer-setup.php && HASH=`curl -sS https://composer.github.io/installer.sig` && php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php');   } echo PHP_EOL;" 
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 #ip address
 ifconfig
