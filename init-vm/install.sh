@@ -14,7 +14,7 @@ sudo systemctl restart xrdp --assume-yes
 sudo apt-get install dconf-editor --assume-yes
 
 #chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb --assume-yes
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb --assume-yes
 
 #filezilla
@@ -30,7 +30,7 @@ sudo snap install gimp --assume-yes
 sudo snap install opera --assume-yes
 
 #skype
-wget https://go.skype.com/skypeforlinux-64.deb --assume-yes
+wget https://go.skype.com/skypeforlinux-64.deb
 sudo apt install ./skypeforlinux-64.deb--assume-yes
 
 #slack
@@ -43,8 +43,8 @@ apt-get install git --assume-yes
 sudo apt install samba --assume-yes
 
 #adobe reader
-sudo apt install gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386 --assume-yes
-wget ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386linux_enu.deb --assume-yes
+sudo apt install gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386
+wget ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386linux_enu.deb
 sudo gdebi AdbeRdr9.5.5-1_i386linux_enu.deb --assume-yes
 
 #npm
@@ -58,6 +58,12 @@ HASH=`curl -sS https://composer.github.io/installer.sig`
 php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php');   } echo PHP_EOL;"
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
+#sublime text
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt-get update
+sudo apt-get install sublime-text
+
 #sublime merge
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo apt-get install apt-transport-https --assume-yes
@@ -66,7 +72,7 @@ sudo apt-get update
 sudo apt-get install sublime-merge --assume-yes
 
 #webinoly
-wget -qO weby qrok.es/wy && sudo bash weby 3 --assume-yes
+wget -qO weby qrok.es/wy && sudo bash weby 3
 sudo webinoly -timezone=Asia/Kolkata
 sudo httpauth -wp-admin=off
 sudo webinoly -login-www-data=on
