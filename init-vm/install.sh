@@ -1,7 +1,8 @@
 #cheking update
 sudo apt-get update --assume-yes
 sudo apt-get upgrade --assume-yes
-sudo apt install net-tools unzip curl --assume-yes
+sudo apt install net-tools unzip curl qemu-guest-agent --assume-yes
+sudo systemctl start qemu-guest-agent
 sudo apt autoremove --assume-yes
 
 #installation of xrdp
