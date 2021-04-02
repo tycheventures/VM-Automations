@@ -99,5 +99,4 @@ ifconfig
 
 #popupfix
 wget https://raw.githubusercontent.com/tycheventures/VM-Automations/main/init-vm/45-allow-colord.pkla
-sudo -s
 mv 45-allow-colord.pkla cd /etc/polkit-1/localauthority/50-local.d/
