@@ -1,3 +1,7 @@
+#!/bin/bash
+# redirect stdout/stderr to a file
+exec > init-vm.log
+
 mkdir -p /tmp/init-temp && cd /tmp/init-temp/
 
 #cheking update
