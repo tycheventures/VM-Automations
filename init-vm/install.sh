@@ -1,6 +1,7 @@
 #!/bin/bash
-# redirect stdout/stderr to a file
-exec > init-vm.log
+# Log Location on Server.
+exec > >(tee -i init-vm.log)
+exec 2>&1
 
 mkdir -p /tmp/init-temp && cd /tmp/init-temp/
 
