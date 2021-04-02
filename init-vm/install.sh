@@ -66,9 +66,9 @@ sudo gdebi -n adobe.deb
 
 #npm
 sudo apt install npm --assume-yes
-npm install -g npm
-npm install -g brewer
-npm install -g grunt-cli
+sudo npm install -g npm
+sudo npm install -g brewer
+sudo npm install -g grunt-cli
 
 #sublime text
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
