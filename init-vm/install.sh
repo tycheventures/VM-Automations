@@ -17,6 +17,11 @@ mv 45-allow-colord.pkla /etc/polkit-1/localauthority/50-local.d/
 
 #Dconf-editor
 sudo apt-get install dconf-editor --assume-yes
+dconf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed true
+dconf write /org/gnome/shell/extensions/dash-to-dock/extend-height true
+dconf write /org/gnome/shell/extensions/dash-to-dock/custom-theme-shrink true
+dconf write /org/gnome/shell/extensions/dash-to-dock/force-straight-corner true
+dconf write /org/gnome/shell/extensions/dash-to-dock/autohide true
 
 #chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
