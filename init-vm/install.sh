@@ -1,3 +1,5 @@
+mkdir init-temp
+cd init-temp/
 #cheking update
 sudo apt-get update --assume-yes
 sudo apt-get upgrade --assume-yes
@@ -14,6 +16,9 @@ sudo systemctl restart xrdp
 #popupfix for rdp
 wget https://raw.githubusercontent.com/tycheventures/VM-Automations/main/init-vm/45-allow-colord.pkla
 mv 45-allow-colord.pkla /etc/polkit-1/localauthority/50-local.d/
+
+#genome shell extension
+sudo apt install gnome-shell-extensions --assume-yes
 
 #Dconf-editor
 sudo apt-get install dconf-editor --assume-yes
