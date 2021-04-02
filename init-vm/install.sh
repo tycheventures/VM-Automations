@@ -1,5 +1,5 @@
-mkdir init-temp
-cd init-temp/
+mkdir -p init-temp && cd init-temp/
+
 #cheking update
 sudo apt-get update --assume-yes
 sudo apt-get upgrade --assume-yes
