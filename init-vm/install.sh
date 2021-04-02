@@ -11,6 +11,10 @@ sudo apt install xrdp --assume-yes
 sudo adduser xrdp ssl-cert
 sudo systemctl restart xrdp
 
+#popupfix for rdp
+wget https://raw.githubusercontent.com/tycheventures/VM-Automations/main/init-vm/45-allow-colord.pkla
+mv 45-allow-colord.pkla /etc/polkit-1/localauthority/50-local.d/
+
 #Dconf-editor
 sudo apt-get install dconf-editor --assume-yes
 
@@ -96,7 +100,3 @@ wp --info
 
 #ip address
 ifconfig
-
-#popupfix
-wget https://raw.githubusercontent.com/tycheventures/VM-Automations/main/init-vm/45-allow-colord.pkla
-mv 45-allow-colord.pkla cd /etc/polkit-1/localauthority/50-local.d/
