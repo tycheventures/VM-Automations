@@ -8,7 +8,7 @@ mkdir -p /tmp/init-temp && cd /tmp/init-temp/
 #cheking update
 sudo apt-get update --assume-yes
 sudo apt-get upgrade --assume-yes
-sudo apt install net-tools unzip curl qemu-guest-agent --assume-yes
+sudo apt-get install net-tools unzip curl ssh qemu-guest-agent --assume-yes
 sudo systemctl start qemu-guest-agent
 sudo apt autoremove --assume-yes
 
