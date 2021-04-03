@@ -1,4 +1,4 @@
-# Prepare Rspberry-Pi as RDP client
+# Prepare Raspberry-Pi as Remote desktop thin client
 
 ### Commands:
 Finish setup with an update.
@@ -9,7 +9,7 @@ sudo apt-get upgrade
 apt install xinit openbox  python-qt4 python-configparser python-urllib3 x11-xserver-utils lxterminal freerdp2-x11 xscreensaver alsa-utils pulseaudio git arandr
 ```
 OR 
-* Download file using below link
+* Automate with below command
 
     `wget https://raw.githubusercontent.com/tycheventures/vm-automations/main/init-pi/init-pi.sh && sudo chmod +x init-pi.sh && bash init-pi.sh`
 
@@ -20,7 +20,7 @@ OR
 
 # RDP clients reference:
 
-* ### Rasbian
+* ### Raspbian
   * Remina for RDP.
   * x2Go client-linux.
   * Xfreerdp-2
@@ -28,10 +28,12 @@ OR
 > https://www.youtube.com/watch?v=cqxayan4FDU
 > https://www.youtube.com/watch?v=lFq4EsqpfaE
 
-* ### Rasbian
+* ### Raspbian
   * RDP (Thin Client)
 
 * ### Windows I0T
+* ### FreeRDP 
+> https://www.youtube.com/watch?v=3wuOWnbCKZ8
 
 * ### RPI (Thin Client)
 	> https://parsec.app/	
@@ -54,23 +56,6 @@ OR
 * ### RDPGUI(ThinIC)
   > https://www.youtube.com/watch?v=3wuOWnbCKZ8	
 
-# Virtualization Server reference
-
-* ### XCP n
-
-* ### Proxmox
-  > https://coldnorthadmin.com/posts/maas_proxmox_power/
-  > https://coldnorthadmin.com/posts/maas_proxmox_power/	
-  > 
-* ### Esx1
-
-* ### Win10
-  > https://www.youtube.com/watch?v=3wuOWnbCKZ8
-  > https://www.youtube.com/watch?v=3wuOWnbCKZ8		
-
-* ### MASS
-  > https://coldnorthadmin.com/posts/maas_proxmox_power/
-  > https://maas.io/
 
 
 
