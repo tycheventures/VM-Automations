@@ -1,15 +1,16 @@
-# Initialise VM with all basic required packages
+# Initialise VM with all basic required packages used by developer
+For virtualization we are using [Proxmox Virtual Environment](https://proxmox.com/). You can VM create VM with any Operating system you may like. Here we are using ubuntu for regular development uses. So we have wrote script to install necessory packages & configure ubuntu to be used remotely.
 
 ## Automated installations
-  This file use for to install xrdp and various types of softwares like google chrome,webinoly etc.
-* Step 1: Download install.sh file
-* Step 2: Run shell file using terminal as sudo ./install.sh
-
-Or You can above things one line of command. Just copy & paste below line in terminal.
+Use install script to initialise your ubuntu VM. Just copy & paste below line in terminal. Then hit enter & sit relax untill script finished its work.
 
 `wget -qO init-vm https://raw.githubusercontent.com/tycheventures/vm-automations/main/init-vm/install.sh && sudo chmod +x init-vm && sudo bash init-vm`
 
 ## Manually installation
+ You can go with manual approach, if you want to modify packages.
+* Step 1: Download install.sh file. You many do changes to install.sh file.
+* Step 2: Run shell file using terminal as sudo ./install.sh
+
 ### XRDP configuration Commands:
   ```
   sudo apt-get update
@@ -52,12 +53,11 @@ Or You can above things one line of command. Just copy & paste below line in ter
   `sudo apt-get install -y kruler`
 
 * Gimp
-  `sudo snap install gimp#skype`
+  `sudo snap install gimp`
 
 * Skype 
   ```
-  wget https://go.skype.com/skypeforlinux-64.deb
-  sudo apt install ./skypeforlinux-64.deb
+  wget https://go.skype.com/skypeforlinux-64.deb && sudo apt install ./skypeforlinux-64.deb
   ```
 * Slack
   `sudo snap install slack --classic`
@@ -87,20 +87,20 @@ Or You can above things one line of command. Just copy & paste below line in ter
   ```
 
 * Webinoly
-  `wget -qO weby qrok.es/wy && sudo bash weby 3Sublime text editor`
+  `wget -qO weby qrok.es/wy && sudo bash weby 3`
 
 ## Xrdp popup showing
 
 XRDP – New “AxRDP – New “Authentication Required…” Popup showing up in Ubuntu 19uthentication Required…” Popup showing up in Ubuntu 19.04
 #### Issue:
 Always ask for authentication
-  * Go to administrator mode. Sudo -s  
-  * cd /etc/polkit-1/localauthority/50-local.d/
-  * create file
-    * cat > 45-allow-colord.pkla 
-  * edit file
-    * nano 45-allow-colord.pkla 
-  * pest code
+  * Switch to administrator mode. `Sudo -s`
+  * Go to directy `cd /etc/polkit-1/localauthority/50-local.d/`
+  * Create file
+    * `cat > 45-allow-colord.pkla`
+  * Edit file
+    * `nano 45-allow-colord.pkla`
+  * Paste below code
 
 ```
 [Allow Colord all Users]
@@ -117,3 +117,11 @@ ResultAny=no
 ResultInactive=no
 ResultActive=yes
 ```
+
+# Virtualization Server reference
+
+* ### [XCP-ng](https://xcp-ng.org/)
+
+* ### [Proxmox Virtual Environment](https://proxmox.com/)
+  
+* ### [Esxi](https://www.vmware.com/go/get-free-esxi)
