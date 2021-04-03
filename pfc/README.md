@@ -1,11 +1,12 @@
-# project folder creator
+# Project Folder Creator
+Its just for internal use. We have regular folder structure to maintain our project on each users machine. Project folder creator (PFC) command, just creates project folder & all necessory folders in user's home directory.
 
 ### Automated installation of pfc
 * Copy link and paste into terminal
 
 ` wget -qO pfc https://raw.githubusercontent.com/tycheventures/vm-automations/main/pfc/pfc && sudo mv pfc /usr/bin/ && sudo chmod +x /usr/bin/pfc` 
 	
-* Run pfc and enter folder name.
+* Then run `pfc` and enter folder name. Use projects domain name as folder name.
 
 ### Manually installation of pfc
 
