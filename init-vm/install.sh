@@ -5,6 +5,9 @@ exec 2>&1
 
 mkdir -p /tmp/init-temp && cd /tmp/init-temp/
 
+#Remove unwanted packages 
+sudo apt purge aisleriot gnome-sudoku mahjongg ace-of-penguins gnomine gbrainy gnome-sushi gnome-taquin gnome-tetravex  gnome-robots gnome-chess lightsoff swell-foop quadrapassel --assume-yes
+
 #cheking update
 sudo apt-get update --assume-yes
 sudo apt-get upgrade --assume-yes
@@ -103,6 +106,9 @@ sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 #wpcli
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && chmod +x wp-cli.phar && sudo mv wp-cli.phar /usr/local/bin/wp
 wp --info
+
+#auto remove
+sudo apt autoremove --assume-yes
 
 #ip address
 ifconfig
