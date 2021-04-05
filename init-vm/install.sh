@@ -77,6 +77,13 @@ sudo apt-get install sublime-text sublime-merge --assume-yes
 #Visual studio code
 sudo snap install --classic code # or code-insiders
 
+#note pad++
+sudo snap install notepad-plus-plus
+
+#simplerecorder
+sudo apt-get update
+sudo apt-get install simplescreenrecorder
+
 #webinoly
 wget -qO weby qrok.es/wy && sudo bash weby 3
 sudo webinoly -timezone=Asia/Kolkata
