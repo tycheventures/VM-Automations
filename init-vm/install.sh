@@ -21,7 +21,7 @@ sudo adduser xrdp ssl-cert
 sudo systemctl restart xrdp
 
 #popupfix for rdp
-wget https://raw.githubusercontent.com/tycheventures/VM-Automations/main/init-vm/45-allow-colord.pkla && sudo mv 45-allow-colord.pkla /etc/polkit-1/localauthority/50-local.d/
+wget https://raw.githubusercontent.com/tycheventures/VM-Automations/main/init-vm/45-allow-colord.txt && sudo mv 45-allow-colord.txt /etc/polkit-1/localauthority/50-local.d/ && cat 45-allow-colord.pkla > 45-allow-colord.txt 
 
 #genome shell extension
 sudo apt install gnome-shell-extensions --assume-yes
