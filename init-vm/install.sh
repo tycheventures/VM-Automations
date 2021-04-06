@@ -25,6 +25,9 @@ wget https://raw.githubusercontent.com/tycheventures/VM-Automations/main/init-vm
 
 #genome shell extension
 sudo apt install gnome-shell-extensions --assume-yes
+gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed true
+gsettings set org.gnome.shell.extensions.dash-to-dock intellihide true
 
 #Dconf-editor
 sudo apt-get install dconf-editor --assume-yes
