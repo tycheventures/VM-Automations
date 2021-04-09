@@ -22,48 +22,138 @@ Use install script to initialise your ubuntu VM. Just copy & paste below line in
   sudo systemctl restart xrdp
   sudo apt install samba	
    ```
+### XRDP fixes:
+  #### Xrdp popup showing
 
+XRDP – New “AxRDP – New “Authentication Required…” Popup showing up in Ubuntu 19uthentication Required…” Popup showing up in Ubuntu 19.04
+  ##### Issue:
+   Always ask for authentication
+     * Switch to administrator mode. `Sudo -s`
+     * Go to directy `cd /etc/polkit-1/localauthority/50-local.d/`
+     * Create file
+       * `cat > 45-allow-colord.pkla`
+     * Edit file
+       * `nano 45-allow-colord.pkla`
+     * Paste below code
+
+      ```
+      [Allow Colord all Users]
+      Identity=unix-user:*
+      Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile
+      ResultAny=no
+      ResultInactive=no
+      ResultActive=yes   
+
+      [Allow Package Management all Users]
+      Identity=unix-user:*
+      Action=org.debian.apt.*;io.snapcraft.*;org.freedesktop.packagekit.*;com.ubuntu.update-notifier.*
+      ResultAny=no
+      ResultInactive=no
+      ResultActive=yes
+      ```
+   #### XRDP Dock not showing:
+   ##### issue:
+    While you are connected remotely ubuntu dock is not showing.
+    Install following softwares and perform commands:
+   * Genome-shell extension
+     `sudo apt install gnome-shell-extensions`
+  
+      After that change settings using:
+       ```
+       gnome-extensions enable ubuntu-dock@ubuntu.com
+       gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
+       gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed true
+       gsettings set org.gnome.shell.extensions.dash-to-dock intellihide true
+       gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+       ```
+   * Dconf-editor
+      `sudo apt-get install dconf-editor`
+  
+      After that change settings using: 
+      ```
+      dconf write /org/gnome/shell/extensions/dash-to-dock/extend-height true
+      dconf write /org/gnome/shell/extensions/dash-to-dock/custom-theme-shrink true
+      dconf write /org/gnome/shell/extensions/dash-to-dock/force-straight-corner true
+      dconf write /org/gnome/shell/extensions/dash-to-dock/autohide true
+      ```   
+     
 ## Manually installation of software.
+  
 * Dconf-editor
   `sudo apt-get install dconf-editor`
-  After that open dconf-editor
-  `Goto:org/gnome/shell/extension/dash-to-dock`
-  And check settings.
+  
+  After that change settings using: 
+   ```dconf write /org/gnome/shell/extensions/dash-to-dock/extend-height true
+      dconf write /org/gnome/shell/extensions/dash-to-dock/custom-theme-shrink true
+      dconf write /org/gnome/shell/extensions/dash-to-dock/force-straight-corner true
+      dconf write /org/gnome/shell/extensions/dash-to-dock/autohide true```
 
+* samba
+  ```
+  sudo apt install samba
+  sudo service smbd restart
+  sudo ufw allow samba
+  ```
+* git, filezilla, kruler
+  `sudo apt-get install git filezilla kruler`
+  
 * Chrome
   ```
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   sudo apt install ./google-chrome-stable_current_amd64.deb
   ```
-* Sublime text editor
+* Opera
+  `sudo snap install opera`
+  
+* Gimp
+  `sudo snap install gimp` 
+  
+* Slack
+  `sudo snap install slack --classic`
+  
+* Skype 
   ```
-  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-  echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-  sudo apt-get update
-  sudo apt-get install sublime-text
+  wget https://go.skype.com/skypeforlinux-64.deb && sudo apt install ./skypeforlinux-64.deb
   ```
-
 * Adobe reader
   ```
   sudo apt install gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engin>
   wget ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i38>
   sudo gdebi AdbeRdr9.5.5-1_i386linux_enu.deb
   ```
-* Kruler
-  `sudo apt-get install -y kruler`
-
-* Gimp
-  `sudo snap install gimp`
-
-* Skype 
+* npm
   ```
-  wget https://go.skype.com/skypeforlinux-64.deb && sudo apt install ./skypeforlinux-64.deb
+  sudo apt install npm --assume-yes
+  sudo npm install -g npm
+  sudo npm install -g brewer
+  sudo npm install -g grunt-cli
   ```
-* Slack
-  `sudo snap install slack --classic`
-
-* Opera
-  `sudo snap install opera`
+* sublime text & sublime merge
+ ```
+  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+  sudo apt-get install apt-transport-https --assume-yes	
+  echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+  sudo apt-get update
+  sudo apt-get install sublime-text sublime-merge --assume-yes
+ ```
+* Visual studio code
+ `sudo snap install --classic code`
+ You can install packages unging following commands:
+ ```
+  code --install-extension ms-vscode.cpptools
+  code --install-extension bajdzis.vscode-database
+  code --install-extension bmewburn.vscode-intelephense-client
+  code --install-extension eamodio.gitlens
+  code --install-extension ecmel.vscode-html-css
+  code --install-extension felixfbecker.php-debug
+  code --install-extension felixfbecker.php-intellisense
+  code --install-extension ikappas.phpcs
+  code --install-extension ms-vscode.cpptools
+  code --install-extension ms-vsliveshare.vsliveshare
+  code --install-extension mtxr.sqltools
+ ```
+* note pad++
+  `sudo snap install notepad-plus-plus`
 
 * npm
   `npm install -g npm`
@@ -74,7 +164,7 @@ Use install script to initialise your ubuntu VM. Just copy & paste below line in
   cd ~
   curl -sS https://getcomposer.org/installer -o composer-setup.php
   HASH=`curl -sS https://composer.github.io/installer.sig`
-  php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php');   } echo PHP_EOL;"
+  php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php');   } echo       PHP_EOL;"
   sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 * sublime merge
@@ -85,38 +175,21 @@ Use install script to initialise your ubuntu VM. Just copy & paste below line in
   sudo apt-get update
   sudo apt-get install sublime-merge
   ```
-
+* simplerecorder
+  ```
+  sudo apt-get update
+  sudo apt-get install simplescreenrecorder
+  ```
 * Webinoly
   `wget -qO weby qrok.es/wy && sudo bash weby 3`
-
-## Xrdp popup showing
-
-XRDP – New “AxRDP – New “Authentication Required…” Popup showing up in Ubuntu 19uthentication Required…” Popup showing up in Ubuntu 19.04
-#### Issue:
-Always ask for authentication
-  * Switch to administrator mode. `Sudo -s`
-  * Go to directy `cd /etc/polkit-1/localauthority/50-local.d/`
-  * Create file
-    * `cat > 45-allow-colord.pkla`
-  * Edit file
-    * `nano 45-allow-colord.pkla`
-  * Paste below code
-
-```
-[Allow Colord all Users]
-Identity=unix-user:*
-Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile
-ResultAny=no
-ResultInactive=no
-ResultActive=yes   
-
-[Allow Package Management all Users]
-Identity=unix-user:*
-Action=org.debian.apt.*;io.snapcraft.*;org.freedesktop.packagekit.*;com.ubuntu.update-notifier.*
-ResultAny=no
-ResultInactive=no
-ResultActive=yes
-```
+  
+* composer
+  ```
+  sudo apt install php-cli php-zip php-curl php-mbstring --assume-yes
+  sudo service nginx restart
+  curl -sS https://getcomposer.org/installer -o composer-setup.php && HASH=`curl -sS https://composer.github.io/installer.sig` && php -r "if (hash_file('SHA384', 'composer-       setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php');   } echo PHP_EOL;" 
+  sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+  ```
 
 # Virtualization Server reference
 
