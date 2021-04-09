@@ -20,22 +20,18 @@ sudo apt install xubuntu-desktop xrdp --assume-yes
 sudo adduser xrdp ssl-cert
 sudo systemctl restart xrdp
 
+#configure
+wget https://raw.githubusercontent.com/tycheventures/VM-Automations/main/init-vm/configure.sh
+chmod +x configure.sh
+
 #popupfix for rdp
 wget https://raw.githubusercontent.com/tycheventures/VM-Automations/main/init-vm/45-allow-colord.txt && sudo mv 45-allow-colord.txt /etc/polkit-1/localauthority/50-local.d/ && cat 45-allow-colord.pkla > 45-allow-colord.txt 
 
 #genome shell extension
 sudo apt install gnome-shell-extensions --assume-yes
-gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
-gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed true
-gsettings set org.gnome.shell.extensions.dash-to-dock intellihide true
 
 #Dconf-editor
 sudo apt-get install dconf-editor --assume-yes
-dconf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed true
-dconf write /org/gnome/shell/extensions/dash-to-dock/extend-height true
-dconf write /org/gnome/shell/extensions/dash-to-dock/custom-theme-shrink true
-dconf write /org/gnome/shell/extensions/dash-to-dock/force-straight-corner true
-dconf write /org/gnome/shell/extensions/dash-to-dock/autohide true
 
 #samba
 sudo apt install samba --assume-yes
