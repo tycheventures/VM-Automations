@@ -58,6 +58,10 @@ sudo snap install slack --classic
 wget https://go.skype.com/skypeforlinux-64.deb
 sudo apt install ./skypeforlinux-64.deb --assume-yes
 
+#zoom
+wget https://zoom.us/client/latest/zoom_amd64.deb
+sudo apt install ./zoom_amd64.deb --assume-yes
+
 #adobe reader
 sudo apt install gdebi-core libxml2:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libatk-adaptor:i386 --assume-yes
 wget -qO adobe.deb ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386linux_enu.deb
