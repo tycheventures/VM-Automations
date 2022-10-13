@@ -93,11 +93,10 @@ sudo apt-get install simplescreenrecorder
 #webinoly
 wget -qO weby qrok.es/wy && sudo bash weby 3
 sudo webinoly -timezone=Asia/Kolkata
-sudo httpauth -wp-admin=off
 sudo webinoly -login-www-data=on
-sudo webinoly -conf-value_max-mb-uploads=1024
-sudo webinoly -conf-value_php-max-time=3000
-sudo webinoly -conf-value_php-max-mem=512
+sudo webinoly -dynvar=max-mb-uploads -value=1024
+sudo webinoly -dynvar=php-max-time -value=3000
+sudo webinoly -dynvar=php-max-mem -value=512
 sudo httpauth -add=[tyche,net]
 
 #composer
