@@ -98,6 +98,8 @@ sudo webinoly -dynvar=max-mb-uploads -value=1024
 sudo webinoly -dynvar=php-max-time -value=3000
 sudo webinoly -dynvar=php-max-mem -value=512
 sudo httpauth -add=[tyche,net]
+sudo webinoly -server-reset=php
+sudo webinoly -server-reset=nginx
 
 #composer
 sudo apt install php-cli php-zip php-curl php-mbstring --assume-yes
